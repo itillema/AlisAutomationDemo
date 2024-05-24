@@ -105,43 +105,15 @@ namespace AlisAutomationDemo_Definition.Pages
 
         }
 
-        public bool VerifyValidationErrors_AllFieldsAreCheckingValidation()
+        public bool VerifyValidationErrors_DemoFormCannotBeSubmitted()
         {
-            if (FirstNameFieldValidationError_PageText.Displayed == true
-                && LastNameFieldValidationError_PageText.Displayed == true
-                && CompanyNameFieldValidationError_PageText.Displayed == true
-                && PhoneNumberFieldValidationError_PageText.Displayed == true)
-                return true;
-
-            if (EmailAddressFieldValidationError_PageText.Displayed == true
+            if (PhoneNumberFieldValidationError_PageText.Displayed == true
+                && EmailAddressFieldValidationError_PageText.Displayed == true
                 && CommunitiesNumberFieldValidationError_PageText.Displayed == true
                 && BedsNumberFieldValidationError_PageText.Displayed == true
                 && SubmitFormValidationError_PageText.Displayed == true)
                 return true;
-            //if (SubmitFormValidationError_PageText.Displayed == true)
-            //    return true;
-            else return false;
-
-        }
-
-        public bool VerifySubmissionError_DemoFormCannotBeSubmitted()
-        {
-            //new Actions(_driver)
-            //    .ScrollToElement(SubmitFormValidationError_PageText)
-            //    .Perform();
-            //if (FirstNameFieldValidationError_PageText.Displayed == true 
-            //    && LastNameFieldValidationError_PageText.Displayed == true 
-            //    && CompanyNameFieldValidationError_PageText.Displayed == true 
-            //    && PhoneNumberFieldValidationError_PageText.Displayed == true)
-            //    return true;
-
-            //if (EmailAddressFieldValidationError_PageText.Displayed == true
-            //    && CommunitiesNumberFieldValidationError_PageText.Displayed == true
-            //    && BedsNumberFieldValidationError_PageText.Displayed == true
-            //    && SubmitFormValidationError_PageText.Displayed == true)
-            //    return true;
-            if (SubmitFormValidationError_PageText.Displayed == true)
-                return true;
+            
             else return false;
 
         }

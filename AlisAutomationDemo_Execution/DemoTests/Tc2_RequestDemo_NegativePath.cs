@@ -17,17 +17,24 @@ namespace AlisAutomationDemo_Execution.DemoTests
         public void Tc2_RequestPlatformDemo_NegativePath(string firstName, string lastName, string companyName, string phoneNumber, string emailAddress, string communitiesNumber, string bedsNumber, string requestMessage)
         {
             HomePage homePage = new(GetDriver());
-            Assert.That(homePage.VerifyButtonsAreDisplayed_HomePageLoaded() == true);
-            homePage.ClickRequestDemo_UserNavigatedToDemoFormPage();
 
+            // Verifying Home page loaded by looking for specific buttons on the page
+            Assert.That(homePage.VerifyButtonsAreDisplayed_HomePageLoaded() == true);
+
+            // Navigating from the Home page to the Demo Form page
+            homePage.ClickRequestDemo_UserNavigatedToDemoFormPage();
             DemoFormPage demoFormPage = new(GetDriver());
+
+            // Verifying the Demo Form page loaded by looking for the iFrame that the form is contained in
             Assert.That(demoFormPage.VerifyiFrameIsDisplayed_DemoFormPageLoaded() == true);
-            // Feeding the form invalid data to verify validation checking
+
+            // Feeding the form invalid data to verify validation checking, and then attempting to submit the form
             demoFormPage.InputDemoFormFieldData_AllFormFieldsPopulated(firstName, lastName, companyName, phoneNumber, emailAddress, communitiesNumber, bedsNumber, requestMessage);
-            //Assert.That(demoFormPage.VerifyValidationErrors_AllFieldsAreCheckingValidation());
             demoFormPage.ClickSendButton_DemoFormIsSubmitted();
-            //Assert.That(demoFormPage.VerifySendButtonIsDisplayed_DemoFormCanBeSubmitted() == true);
-            //Assert.That(demoFormPage.VerifySubmissionError_DemoFormCannotBeSubmitted());
+
+            // Verifying validation checks for Phone Number field, Email field, Communities field, Beds field, and SEND (submit) button
+            Assert.That(demoFormPage.VerifyValidationErrors_DemoFormCannotBeSubmitted());
+
         }
 
         [TearDown]

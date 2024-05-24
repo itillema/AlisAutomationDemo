@@ -12,7 +12,7 @@
 	EXPRESULT: Form fields have been input without validation errors
 
 4.
-	ACTION: Click the 'Send' button
+	ACTION: Click the 'Send' button (work around for demo)
 	EXPRESULT: Demo form is submitted
 
 5.
