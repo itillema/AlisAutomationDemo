@@ -28,6 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AlisAutomationDemo_Definition\AlisAutomationDemo_Definition.csproj" />
+    <ProjectReference Include="..\AlisAutomationDemo_Utility\AlisAutomationDemo_Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 

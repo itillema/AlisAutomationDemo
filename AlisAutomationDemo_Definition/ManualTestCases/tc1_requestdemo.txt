@@ -1,0 +1,20 @@
+﻿# TC1: Request a Demo
+1. 
+	ACTION: Navigate to the Medtelligent website Home page
+	EXPRESULT: Verify home page loaded
+
+2. 
+	ACTION: Click 'Request Demo' button
+	EXPRESULT: User is navigated to the Demo Form page
+
+3. 
+	ACTION: Input form fields with user request data
+	EXPRESULT: Form fields have been input without validation errors
+
+4.
+	ACTION: Click the 'Send' button
+	EXPRESULT: Demo form is submitted
+
+5.
+	ASSERT: Verify demo form has been submitted
+	EXPRESULT: Page message is displayed to infrom the user that the demo form has been submitted (?)
