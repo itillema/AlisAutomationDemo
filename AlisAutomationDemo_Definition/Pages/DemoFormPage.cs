@@ -47,6 +47,9 @@ namespace AlisAutomationDemo_Definition.Pages
         // Action Methods
         public void InputDemoFormFieldData_AllFormFieldsPopulated(string firstName, string lastName, string companyName, string phoneNumber, string emailAddress, string communitiesNumber, string bedsNumber, string requestMessage)
         {
+            //IJavaScriptExecutor jse = (IJavaScriptExecutor)_driver;
+            //jse.ExecuteScript("document.body.style.zoom='90%'");
+            //_driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
             _driver.SwitchTo().Frame("hs-form-iframe-0");
             FirstNameField_TextInput.Click();
@@ -84,8 +87,6 @@ namespace AlisAutomationDemo_Definition.Pages
             FormSendButton_Button.Click();
             // _driver.SwitchTo().DefaultContent();
         }
-
-
 
 
         // Verification Methods

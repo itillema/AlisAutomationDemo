@@ -13,6 +13,9 @@ namespace AlisAutomationDemo_Utility.Configurations
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.medtelligent.com/";
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            //IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
+            //jse.ExecuteScript("document.body.style.zoom='90%'");
+
         }
 
         public IWebDriver GetDriver() 
